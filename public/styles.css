@@ -1,0 +1,87 @@
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   overflow: hidden;
+   box-sizing: border-box;
+}
+
+body {
+   display: grid;
+   min-height: 100vh;
+   row-gap: 0;
+   grid-template-areas:
+      "n n n n n n n n n n n n"
+      "l c c c c c c c r r r r"
+      "l c c c c c c c r r r r"
+      "l c c c c c c c r r r r"
+      "f f f f f f f f f f f f";
+}
+
+nav {
+   grid-area: n;
+   background-color: black;
+}
+
+#container {
+   grid-area: c;
+   margin: auto;
+   cursor: crosshair;
+   background-size: contain;
+   background-color: #666666;
+}
+
+.swatches {
+   grid-area: l;
+   justify-self: start;
+   display: flex;
+   flex-direction: column;
+   background-color: #666666;
+   
+}
+
+.btn-player, .btn-utility {
+   width: 3rem;
+   height: 3rem;
+   border-radius: 4px;
+   margin: .5rem;
+   cursor: pointer;
+}
+
+.btn-utility {
+    width: 3.5rem;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.yellow {background-color: yellow}
+.purple {background-color: purple}
+.green {background-color: green}
+.blue {background-color: blue}
+.orange {background-color: darkorange}
+
+.panel {
+   grid-area: r;
+   justify-self: end;
+   /*display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   justify-content: space-around;*/
+   background-color: #333333;
+}
+
+#maps {
+    width: 100%;
+    background-color: green;
+}
+
+.smoke {background-image: url("images/utility/smoke.png")}
+.molotov {background-image: url("images/utility/molotov.png")}
+.flash {background-image: url("images/utility/flash.png")}
+.grenade {background-image: url("images/utility/grenade.png")}
+.decoy {background-image: url("images/utility/decoy.png")}
+
+footer {
+   grid-area: f;
+   background-color: darkblue;
+}

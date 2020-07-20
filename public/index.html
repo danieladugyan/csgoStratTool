@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS:GO Strat Tool</title>
+
+    <script src="https://unpkg.com/konva@7.0.3/konva.min.js"></script>
+    <script src="board.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav></nav>
+
+    <main id="container"></main>
+
+    <aside class="swatches">
+      <button class="btn-player white"></button>
+      <button class="btn-player yellow"></button>
+      <button class="btn-player purple"></button>
+      <button class="btn-player green"></button>
+      <button class="btn-player blue"></button>
+      <button class="btn-player orange"></button>
+    </aside>
+
+    <section class="panel">
+      <select id="maps" onchange="updateMap()">
+        <option>cache</option>
+        <option>dust2</option>
+        <option>inferno</option>
+        <option>mirage</option>
+        <option>nuke</option>
+        <option>overpass</option>
+        <option>train</option>
+      </select>
+
+      <div id="utility">
+        <button class="btn-utility smoke"></button>
+        <button class="btn-utility molotov"></button>
+        <button class="btn-utility flash"></button>
+        <button class="btn-utility grenade"></button>
+        <button class="btn-utility decoy"></button>
+      </div>
+    </section>
+
+    <footer></footer>
+  </body>
+</html>
