@@ -4,7 +4,27 @@
    border: 0;
    overflow: hidden;
    box-sizing: border-box;
+   color: white;
 }
+
+#testBtn {
+   outline: 1px solid gray;
+   padding: .6rem;
+   margin: .4rem;
+}
+
+button {
+   background-color: transparent;
+   outline: 0;
+}
+
+button.active {
+   /* https://www.cssmatic.com/box-shadow 
+   box-shadow: inset 0px 0px 6px 2px rgba(0,0,0,1); */
+   border: 3px dashed black;
+}
+
+/* reset over */
 
 body {
    display: grid;
@@ -16,11 +36,12 @@ body {
       "l c c c c c c c r r r r"
       "l c c c c c c c r r r r"
       "f f f f f f f f f f f f";
+   background-color: black;
 }
 
 nav {
    grid-area: n;
-   background-color: black;
+   background-color: palegreen;
 }
 
 #container {
@@ -37,10 +58,10 @@ nav {
    display: flex;
    flex-direction: column;
    background-color: #666666;
-   
+   z-index: 10;
 }
 
-.btn-player, .btn-utility {
+.btn-player, .btn-entity, .btn-utility, .btn-path {
    width: 3rem;
    height: 3rem;
    border-radius: 4px;
@@ -48,17 +69,26 @@ nav {
    cursor: pointer;
 }
 
-.btn-utility {
-    width: 3.5rem;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0);
-}
-
+.white {background-color: white}
 .yellow {background-color: yellow}
 .purple {background-color: purple}
 .green {background-color: green}
 .blue {background-color: blue}
 .orange {background-color: darkorange}
+
+.btn-entity {
+   background-color: tomato;
+}
+
+#ct, #t {
+   border-radius: 3rem;
+   background-color: wheat;
+}
+
+.btn-utility {
+    width: 3.5rem;
+    background-size: cover;
+}
 
 .panel {
    grid-area: r;
@@ -68,6 +98,11 @@ nav {
    align-items: flex-start;
    justify-content: space-around;*/
    background-color: #333333;
+   z-index: 10;
+}
+
+.panel > div {
+   border-bottom: 1px solid black;
 }
 
 #maps {
@@ -75,11 +110,15 @@ nav {
     background-color: green;
 }
 
-.smoke {background-image: url("images/utility/smoke.png")}
-.molotov {background-image: url("images/utility/molotov.png")}
-.flash {background-image: url("images/utility/flash.png")}
-.grenade {background-image: url("images/utility/grenade.png")}
-.decoy {background-image: url("images/utility/decoy.png")}
+.btn-path > i {
+   font-size: 2.5rem;
+}
+
+#smoke {background-image: url("images/utility/smoke.png")}
+#molotov {background-image: url("images/utility/molotov.png")}
+#flash {background-image: url("images/utility/flash.png")}
+#grenade {background-image: url("images/utility/grenade.png")}
+#decoy {background-image: url("images/utility/decoy.png")}
 
 footer {
    grid-area: f;

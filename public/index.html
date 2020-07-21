@@ -5,7 +5,9 @@
 
     <script src="https://unpkg.com/konva@7.0.3/konva.min.js"></script>
     <script src="board.js" defer></script>
-    <link rel="stylesheet" href="styles.css" />
+    <script src="animation.js" defer></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://kit.fontawesome.com/2bc2ac9fed.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -14,7 +16,7 @@
     <main id="container"></main>
 
     <aside class="swatches">
-      <button class="btn-player white"></button>
+      <button class="btn-player white active"></button>
       <button class="btn-player yellow"></button>
       <button class="btn-player purple"></button>
       <button class="btn-player green"></button>
@@ -33,15 +35,27 @@
         <option>train</option>
       </select>
 
+      <div id="entity">
+        <button class="btn-entity active" id="ct">CT</button>
+        <button class="btn-entity" id="t">T</button>
+        <button class="btn-entity">BOMB</button>
+      </div>
+
       <div id="utility">
-        <button class="btn-utility smoke"></button>
-        <button class="btn-utility molotov"></button>
-        <button class="btn-utility flash"></button>
-        <button class="btn-utility grenade"></button>
-        <button class="btn-utility decoy"></button>
+        <button class="btn-utility" id="smoke"></button>
+        <button class="btn-utility" id="molotov"></button>
+        <button class="btn-utility" id="flash"></button>
+        <button class="btn-utility" id="grenade"></button>
+        <button class="btn-utility" id="decoy"></button>
+      </div>
+
+      <div id="path">
+        <button class="btn-path" id="pen"><i class="fas fa-pen"></i></button>
+        <button class="btn-path" id="eraser"><i class="fas fa-eraser"></i></button>
+        <button class="btn-path" id="clearAll"><i class="fas fa-times"></i></button>
       </div>
     </section>
 
-    <footer></footer>
+    <footer><button id="testBtn" onclick="testFunction()">TEST</button></footer>
   </body>
 </html>
